@@ -56,25 +56,25 @@
         padding: 0; 
     }
 
-    /* @keyframes appear{
+    @keyframes appear{
         from{
             opacity: 0;
-            clip-path: inset(100% 100% 0 0);
-            transform: translate(+50px);
-            scale:0.7;
+            /* clip-path: inset(100% 100% 0 0);
+            transform: translate(+50px); */
+            scale:0.5;
         }
         to{
             opacity: 1;
-            clip-path: inset(0 0 0 0);
-            transform: translate(0px);
+            /* clip-path: inset(0 0 0 0);
+            transform: translate(0px); */
             scale: 1;
         }
     }
     .animate{
-        animation: appear  2s linear;
-        
-
-    } */
+        animation: appear linear;
+        animation-timeline: view();
+        animation-range: entry 0% cover 40%;
+    }
 
     @keyframes spin{
       from{transform: rotate(0deg);}
@@ -84,14 +84,7 @@
       animation: spin 1s ease;
     }
 
-    @keyframes bounce{
-      0%{top: 0;}
-      50%{top: -40%;}
-      100%{top: 0;}
-    }
-    .ball:hover{
-      animation: bounce 0.5s ease;
-    }
+   
     /*custom scroll bar*/
     ::-webkit-scrollbar{
         width: 6px;
@@ -203,6 +196,9 @@
       }
       button{
         size: var(--buttton-size);
+      }
+      .spin{
+        animation: spin 1s ease;
       }
       
     }
@@ -378,16 +374,16 @@
   <section class="homeSection " id="home">
       <div class="container-fluid h-100 ">
         <div class="row h-100  ">
-            <div class="col-lg-6 text-center rowCn">
+            <div class="col-lg-6 text-center rowCn ">
                <img src="assetsNew/MyRealtimeImage.jpg" alt="Responsive image" class=" img-fluid  h-100
-               w-50 "  >
+               w-50  "  >
             </div>
-            <div class="col-lg-6  rowCn pb-6" ><br><br><br>
+            <div class="col-lg-6  rowCn pb-6 " ><br><br><br>
                 <p class=" text-light h3 fw-light h5 responsive-text " >Hello, It's Me</p>
-                <p class=" h1 fw-bolder fs-1 text-warning responsive-text ">HARI KRISHNA</p>
-                <p class=" text-light h3 fw-light h5 responsive-text " >I'm a FrontEnd Developer</p><br>
-                <p class=" text-light responsive-text " >Seeking position to utilize my skills and abilities in the information technology industry that offer professional growth While being resourceful, innovative and flexible</p><br>
-                <div class="">
+                <p class=" h1 fw-bolder fs-1 text-warning responsive-text  ">HARI KRISHNA</p>
+                <p class=" text-light h3 fw-light h5 responsive-text  " >I'm a FrontEnd Developer</p><br>
+                <p class=" text-light responsive-text animate" >Seeking position to utilize my skills and abilities in the information technology industry that offer professional growth While being resourceful, innovative and flexible</p><br>
+                <div class="animate">
                             <div class="flex space-x-4 ">
                                 <a href="https://github.com/imharikrishna194" class="bg-yellow-500 hover:bg-blue-600 text-dark w-10 h-10 rounded-full flex items-center justify-center spin"  target="_blank"  >
                                     <i class="fab fa-github"></i>
@@ -405,14 +401,14 @@
                                 </a>
                             </div>
                 </div><br>
-                <a href="#personalprofile" class=" bg-warning btn btn-sm responsive-text hover:bg-blue-600" >More...</a>                
+                <a href="#personalprofile" class=" bg-warning btn btn-sm responsive-text hover:bg-blue-600 animate" >More...</a>                
             </div>
         </div>
       </div>
   </section>
   <!---===== aboutSection =====-->  
   <section class="aboutSection bg-dark text-warning responsive-text" id="about">
-      <div class="aboutSectionDiv container-fluid p-4 text-center ">
+      <div class="aboutSectionDiv container-fluid p-4 text-center animate animate">
         <h1 class="text-2xl font-bold text-dark-400 ">AboutMe</h1>
       </div><hr><br> 
       <figure class="text-warning-400 py-5 pt-0 ">
@@ -420,25 +416,25 @@
             
       <div class="flex flex-col md:flex-row items-center ">
                
-                <div class=" col-lg-12 ">
+                <div class=" col-lg-12  ">
                     <h3 class="text-2xl font-semibold mb-4 text-yellow-500">Who am I?</h3>
                   <div class=" container-fluid py-5 px-10 pt-0 pb-3 ">
         <div class="row text-light">
-          <div class="col-lg-4  p-2 " >
+          <div class="col-lg-4  p-2 animate" >
             <h3 >TeamWork and communication Skills :</h3>
             <ol><li>Worked with small and large team in sevearl website development projects.</li>
                 <li>Offered alternative solution to improve flow.</li>
                 <li>Particpated in client mettings to fully understand project requirements.</li>
             </ol>
           </div>
-          <div class="col-lg-4  p-2 " >
+          <div class="col-lg-4  p-2 animate" >
             <h3 class="">Project and Management :</h3>
             <ol><li>Successfully complete two basic coding projects simultaneously.</li>
                 <li>Create a project timeline for our intern group that was later adapted by Management for other group.</li>
                 <li>Orgainzed project files and coding resources which led to faster project turnaround.</li>
             </ol>
           </div>
-          <div class="col-lg-4  p-2 " >
+          <div class="col-lg-4  p-2  animate" >
             <h3 class=" ">Roles and responsibilites :</h3>
             <ol><li>Develope UI compenents and Asist Website Layout and features</li>
                 <li>Write Clean,maintainable cod and Responsive Design Implementation</li>
@@ -446,8 +442,8 @@
             </ol>
           </div>
         </div>
-      </div>
-          <div class="grid grid-cols-2 gap-4 mb-8 pt-0  text-warning container-fluid responsive-text">
+               </div>
+          <div class="grid grid-cols-2 gap-4 mb-8 pt-0  text-warning container-fluid responsive-text animate ">
                         <div class="flex items-center ">
                             <i class="fas fa-check-circle text-yellow-500 mr-2"></i>
                             <span>Problem Solving</span>
@@ -466,7 +462,7 @@
                         </div>                        
           </div>
           
-          <div class="flex space-x-4 px-10 responsive-text container-fluid downloadButton ">
+          <div class="flex space-x-4 px-10 responsive-text container-fluid downloadButton animate ">
                         <a href="#" class="bg-yellow-500 hover:bg-blue-600 text-dark px-6 py-2 rounded-lg flex items-center">
                             <i class="fas fa-download mr-2"></i> Download CV
                         </a>
@@ -481,7 +477,7 @@
   </section>
   <!---===== QualificationSection =====-->
   <section class="bg-warning p-3 text-dark responsive-text" id="QualificationSection">
-    <div class="aboutSectionDiv container-fluid p-4 text-center ">
+    <div class="aboutSectionDiv container-fluid p-4 text-center  ">
         <h1 class="text-2xl font-bold text-dark-400 ">Qualification</h1>
       </div><hr><br> 
     <div class="container-fluid  pb-5">
@@ -495,7 +491,7 @@
                  <div class="border-l-2 border-dark absolute h-full top-0 left-6"></div>
                         
                 <!-- Education 1 -->
-                  <div class="mb-8 pl-10 relative responsive-text">
+                  <div class="mb-8 pl-10 relative responsive-text animate">
                     <div class="absolute w-4 h-4 bg-dark rounded-full left-6 -mt-1"></div>
                     <div class="bg-dark p-6 rounded-lg shadow-md">
                       <div class="flex justify-between items-start">
@@ -513,7 +509,7 @@
                       </div>
                         
                         <!-- Education 2 -->
-                        <div class="mb-8 pl-10 relative responsive-text">
+                        <div class="mb-8 pl-10 relative responsive-text animate">
                             <div class="absolute w-4 h-4 bg-dark rounded-full left-6 -mt-1"></div>
                             <div class="bg-dark p-6 rounded-lg shadow-md">
                                 <div class="flex justify-between items-start">
@@ -531,7 +527,7 @@
                         </div>
                         
                         <!-- Education 3 -->
-                        <div class="pl-10 relative responsive-text" >
+                        <div class="pl-10 relative responsive-text animate" >
                             <div class="absolute w-4 h-4 bg-dark rounded-full left-6 -mt-1"></div>
                             <div class="bg-dark p-6 rounded-lg shadow-md">
                                 <div class="flex justify-between items-start">
@@ -560,7 +556,7 @@
                 <div>
                   <h1 class="skills__subtitle fw-bold text-light">Web Technolgies</h1>
                   
-                  <div class="skills__data">
+                  <div class="skills__data animate">
                     <div class="skills__names">
                         <i class='bx bxl-html5 skills__icon'></i>
                         <span class="skills__name">HTML5</span>
@@ -571,7 +567,7 @@
                       <span class="skills__percentage">95%</span>
                     </div>
                   </div>
-                  <div class="skills__data">
+                  <div class="skills__data animate">
                     <div class="skills__names">
                       <i class='bx bxl-css3 skills__icon'></i>
                        <span class="skills__name">CSS3</span>
@@ -582,7 +578,7 @@
                         <span class="skills__percentage">85%</span>
                     </div>
                   </div>
-                    <div class="skills__data">
+                    <div class="skills__data animate">
                       <div class="skills__names">
                         <i class='bx bxl-javascript skills__icon' ></i>
                         <span class="skills__name">JAVASCRIPT</span>
@@ -593,7 +589,7 @@
                       <span class="skills__percentage">65%</span>
                     </div>
                     </div>
-                      <div class="skills__data">
+                      <div class="skills__data animate">
                         <div class="skills__names">
                           <i class='bx bxs-paint skills__icon'></i>
                             <span class="skills__name">UX/UI</span>
@@ -613,7 +609,7 @@
               <div class=" container-fluid p-3">
                 <h1 class="skills__text fw-bold text-center text-light ">Technical Summary </h1>
         <div class="row px-10">
-          <div class="col-lg-4  p-2 ">
+          <div class="col-lg-4  p-2 animate">
             <!-- <h3 class="text-light">TeamWork and communication Skills</h3> -->
             <ol><li><i class="fas fa-check-circle text-yellow-500 mr-2"></i>Have a good Knowledge in HTML with CSS and it's properties.</li>
                 <li><i class="fas fa-check-circle text-yellow-500 mr-2"></i>Quite good Knowledge in JAVASCRIPT.</li>
@@ -621,7 +617,7 @@
                 <li><i class="fas fa-check-circle text-yellow-500 mr-2"></i>Concepts in Responsive Design, DOM Manipulation, Version Control.</li>
             </ol>
           </div>
-          <div class="col-lg-4  p-2 ">
+          <div class="col-lg-4  p-2 animate">
             
             <ol><li><i class="fas fa-check-circle text-yellow-500 mr-2"></i>Good Knowledge in BOOTSTRAP-4,5.</li>
                 <li><i class="fas fa-check-circle text-yellow-500 mr-2"></i>Responsive Designing for Mobile-first development, Flexbox, CSS Grid.</li>
@@ -629,7 +625,7 @@
                 <li><i class="fas fa-check-circle text-yellow-500 mr-2"></i>Responsive Design Implementation.</li>
             </ol>
           </div>
-          <div class="col-lg-4  p-2 ">
+          <div class="col-lg-4  p-2 animate">
             
             <ol><li><i class="fas fa-check-circle text-yellow-500 mr-2"></i>Basic Communication with Cross-Functional teams.</li>
               <li><i class="fas fa-check-circle text-yellow-500 mr-2"></i>Following best practices and write readable and reusable frontend code.</li>
@@ -645,9 +641,9 @@
       <div class="CertificateDiv1 container-fluid p-4 text-center ">
         <h1 class="text-2xl font-bold text-dark-400 ">Certification</h1>
       </div><hr><br> 
-      <div class="CertificateDiv2 container text-center pb-5">
+      <div class="CertificateDiv2 container text-center pb-5 animate">
         <img src="assetsNew/Simplilearn Certificate.jpg" alt="SimplilearnCertificate" class="img-fluid d-block mx-auto"><br>
-        <p><a href="#" class="text-primary">https://simpli.app.link/4qEhxoQtTTb</a><br><br>
+        <p><a href="#" class="text-primary ">https://simpli.app.link/4qEhxoQtTTb</a><br><br>
         Thank you, #SkillUp by #Simplilearn 🙌 <br>
         📢  I am super excited to share that I’ve just completed Introduction to Front End Development. 🎓<br><br>
         I had a great experience learning industry aligned skills of Software Development  <br><br>
@@ -665,11 +661,11 @@
       </div><hr><br> 
     <div class="container-fluid h-100 pb-5 responsive-text">
         <div class="row h-100  ">
-            <div class="col-lg-6 text-center row2Cn">
+            <div class="col-lg-6 text-center row2Cn animate">
                <img src="assetsNew/myPaasportSizeimg.png"  alt="Responsive image" class=" img-fluid rounded-pill  h-100
                w-50 " >
             </div>
-            <div class="col-lg-6 tableContainer"><br><br><br>
+            <div class="col-lg-6 tableContainer animate"><br><br><br>
               <table class="table ">
                 <tbody>
                   <tr >
@@ -707,7 +703,7 @@
     <div class="aboutSectionDiv container-fluid p-4 text-center ">
         <h1 class="text-2xl font-bold text-dark-400 ">Work</h1>
     </div><hr><br> 
-    <div class="work__container bd-grid pb-5">
+    <div class="work__container bd-grid pb-5 animate">
       <a href="" class="work__img">
         <img src="assetsNew/work1.jpg" alt="">
         <h3 class="text-center">Develop UI compenents</h3>
@@ -744,10 +740,10 @@
             
             <div class="flex flex-col md:flex-row ">
                 <div class="md:w-1/2 mb-12 md:mb-0 md:pr-8 animate-fadeIn delay-200">
-                    <div class="bg-yellow-500 p-8 rounded-lg shadow-md">
+                    <div class="bg-yellow-500 p-8 rounded-lg shadow-md animate">
                         <h3 class="text-2xl font-semibold mb-6 text-dark">Contact Information</h3>
                         
-                        <div class="space-y-6">
+                        <div class="space-y-6 ">
                             <div class="flex items-start">
                                 <div class="bg-blue-100 p-3 rounded-full mr-4">
                                     <i class="fas fa-envelope text-dark"></i>
@@ -799,7 +795,7 @@
                     </div>
                 </div>
                 
-                <div class="md:w-1/2 md:pl-8 animate-fadeIn delay-300">
+                <div class="md:w-1/2 md:pl-8 animate-fadeIn animate delay-300">
                     <div class="bg-yellow-500 p-8 rounded-lg shadow-md">
                         <h3 class="text-2xl font-semibold mb-6 text-dark">Send Me a Message</h3>
                         <form id="contactForm" class="contactForm">
@@ -835,14 +831,14 @@
     <footer class="bg-black text-white py-12 responsive-text">
         <div class="container mx-auto px-6">
             <div class="flex flex-col md:flex-row justify-between">
-                <div class="mb-8 md:mb-0">
+                <div class="mb-8 md:mb-0 animate">
                     <h3 class="text-2xl font-bold mb-4">imhariKrishna</h3>
                     <p class="max-w-xs text-gray-400">
                         Full Stack Developer creating digital experiences that make an impact.
                     </p>
                 </div>
                 
-                <div class="grid grid-cols-2 md:grid-cols-3 gap-8">
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-8 animate">
                     <div>
                         <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
                         <ul class="space-y-2">
@@ -853,7 +849,7 @@
                         </ul>
                     </div>
                     
-                    <div>
+                    <div class="animate">
                         <h4 class="text-lg font-semibold mb-4">Services</h4>
                         <ul class="space-y-2">
                             <li><a href="#work" class="text-gray-400 hover:text-white transition">Frontend Web Development</a></li>
@@ -865,17 +861,17 @@
                     
                     <div>
                         <h4 class="text-lg font-semibold mb-4">Connect</h4>
-                        <div class="flex space-x-4 mb-4">
-                            <a href="https://github.com/imharikrishna194" class="text-gray-400 hover:text-white transition"  target="_blank">
+                        <div class="flex space-x-4 mb-4 animate">
+                            <a href="https://github.com/imharikrishna194" class="text-gray-400 hover:text-white transition spin"  target="_blank">
                                 <i class="fab fa-github text-xl"></i>
                             </a>
-                            <a href="https://www.linkedin.com/in/hari-krishna-101810368?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="text-gray-400 hover:text-white transition" target="_blank">
+                            <a href="https://www.linkedin.com/in/hari-krishna-101810368?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="text-gray-400 hover:text-white spin transition" target="_blank">
                                 <i class="fab fa-linkedin-in text-xl"></i>
                             </a>
-                            <a href="t.me/HarikrishnA194" class="text-gray-400 hover:text-white transition" target="_blank">
+                            <a href="t.me/HarikrishnA194" class="text-gray-400 hover:text-white spin transition" target="_blank">
                                 <i class="fab fab fa-telegram text-xl"></i>
                             </a>
-                            <a href="https://www.instagram.com/hari.krishna194?igsh=bXhqdHluY3lvOHlx" class="text-gray-400 hover:text-white transition" target="_blank">
+                            <a href="https://www.instagram.com/hari.krishna194?igsh=bXhqdHluY3lvOHlx" class="text-gray-400 hover:text-white transition spin" target="_blank">
                                 <i class="fab fa-instagram text-xl"></i>
                             </a>
                         </div>
