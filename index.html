@@ -8,7 +8,8 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
-   <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+  <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+  
   <style>
 
     /*===== GOOGLE FONTS =====*/
@@ -37,14 +38,6 @@
       /*===== z index =====*/
       --z-back: -10;
       --z-fixed: 100;
-    }
-    @media screen and (min-width: 968px) {
-    :root {
-      --big-font-size: 3.5rem;
-      --h2-font-size: 2rem;
-      --normal-font-size: 1rem;
-      --smaller-font-size: .875rem;
-    }
     }
     /*===== BASE =====*/
     *, ::before, ::after {
@@ -174,7 +167,26 @@
       }
       .aboutSectionDiv1{
         display: none;
-      }     
+      }  
+      h1,h2{
+        font-size: var(--normal-font-size);
+      }  
+      p{
+        font-size: var(--normal-font-size);
+      }
+      button{
+        size: var(--smaller-font-size);
+      }
+      li,span{
+        font-size: var(--smaller-font-size);
+      }
+      p{
+        font-size: var(--normal-font-size);
+      }
+      button{
+        size: var(--buttton-size);
+      }
+      
     }
     @media screen and (min-width: 992px) {
     .bd-grid {
@@ -192,10 +204,15 @@
       .footer .footer__social  .footer__icon a{
         position: relative;
         left: 42%;
-
       }
-      
+      :root ,*{
+        --big-font-size: 3.5rem;
+        --h2-font-size: 2rem;
+        --normal-font-size: 1rem;
+        --smaller-font-size: .875rem;
     }
+
+  }
     /* ===== SKILLS =====*/
     .skills__container {
       row-gap: 2rem;
@@ -283,6 +300,7 @@
   
 
 </style>
+
 </head>
 <body>
 <!---header Section-->
@@ -299,13 +317,13 @@
 
         <!-- Desktop Menu -->
         <div class="hidden md:flex space-x-4">
-          <a href="#home" class="text-yellow-400 hover:text-red-600">Home</a>
-          <a href="#about" class="text-yellow-400 hover:text-red-600">AboutMe</a>
-          <a href="#QualificationSection" class="text-yellow-400 hover:text-red-600">Qualification</a>
-          <a href="#skills" class="text-yellow-400 hover:text-red-600">SKills</a>
-          <a href="#certification" class="text-yellow-400 hover:text-red-600">Certification</a>
-          <a href="#personalprofile" class="text-yellow-400 hover:text-red-600">PersonalProfile</a>
-          <a href="#contact" class="text-yellow-400 hover:text-red-600">ContactMe</a>
+          <a href="#home" class="text-yellow-400 hover:text-red-600" >Home</a>
+          <a href="#about" class="text-yellow-400 hover:text-red-600" >AboutMe</a>
+          <a href="#QualificationSection" class="text-yellow-400 hover:text-red-600" >Qualification</a>
+          <a href="#skills" class="text-yellow-400 hover:text-red-600" >SKills</a>
+          <a href="#certification" class="text-yellow-400 hover:text-red-600" >Certification</a>
+          <a href="#personalprofile" class="text-yellow-400 hover:text-red-600" >PersonalProfile</a>
+          <a href="#contact" class="text-yellow-400 hover:text-red-600" >ContactMe</a>
 
         </div>
 
@@ -324,13 +342,13 @@
 
     <!-- Mobile Menu -->
       <div id="menu" class="hidden md:hidden px-4 pb-4">
-        <a href="#home" class="block text-yellow-400 py-2 hover:text-red-600">Home</a>
-        <a href="#about" class="block text-yellow-400 py-2 hover:text-red-600">AboutMe</a>
-        <a href="#QualificationSection" class="block text-yellow-400 py-2 hover:text-red-600">Qualification</a>
-        <a href="#skills" class="block text-yellow-400 py-2 hover:text-red-600">Skills</a>
-        <a href="#certification" class="block text-yellow-400 py-2 hover:text-red-600">Certification</a>
-        <a href="#personalprofile" class="block text-yellow-400 py-2 hover:text-red-600">PersonalProfile</a>
-        <a href="#contact" class="block text-yellow-400 py-2 hover:text-red-600">ContactMe</a>
+        <a href="#home" class="block text-yellow-400 py-2 hover:text-red-600" >Home</a>
+        <a href="#about" class="block text-yellow-400 py-2 hover:text-red-600" >AboutMe</a>
+        <a href="#QualificationSection" class="block text-yellow-400 py-2 hover:text-red-600" >Qualification</a>
+        <a href="#skills" class="block text-yellow-400 py-2 hover:text-red-600" >Skills</a>
+        <a href="#certification" class="block text-yellow-400 py-2 hover:text-red-600" >Certification</a>
+        <a href="#personalprofile" class="block text-yellow-400 py-2 hover:text-red-600" >PersonalProfile</a>
+        <a href="#contact" class="block text-yellow-400 py-2 hover:text-red-600" >ContactMe</a>
 
       </div>
 
@@ -353,16 +371,16 @@
                 <p class=" text-light responsive-text " >Seeking position to utilize my skills and abilities in the information technology industry that offer professional growth While being resourceful, innovative and flexible</p><br>
                 <div class="">
                             <div class="flex space-x-4">
-                                <a href="https://github.com/imharikrishna194" class="bg-yellow-500 hover:bg-blue-600 text-dark w-10 h-10 rounded-full flex items-center justify-center transition">
+                                <a href="https://github.com/imharikrishna194" class="bg-yellow-500 hover:bg-blue-600 text-dark w-10 h-10 rounded-full flex items-center justify-center" target="_blank">
                                     <i class="fab fa-github"></i>
                                 </a>
-                                <a href="https://www.linkedin.com/in/hari-krishna-101810368?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="bg-yellow-500 hover:bg-blue-600 text-dark w-10 h-10 rounded-full flex items-center justify-center transition">
+                                <a href="https://www.linkedin.com/in/hari-krishna-101810368?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="bg-yellow-500 hover:bg-blue-600 text-dark w-10 h-10 rounded-full flex items-center justify-center " target="_blank">
                                     <i class="fab fa-linkedin-in"></i>
                                 </a>
-                                <a href="t.me/HarikrishnA194" class="bg-yellow-500 hover:bg-blue-600 text-dark w-10 h-10 rounded-full flex items-center justify-center transition">
+                                <a href="t.me/HarikrishnA194" class="bg-yellow-500 hover:bg-blue-600 text-dark w-10 h-10 rounded-full flex items-center justify-center " target="_blank">
                                     <i class="fab fab fab fa-telegram"></i>
                                 </a>
-                                <a href="https://www.instagram.com/hari.krishna194?igsh=bXhqdHluY3lvOHlx" class="bg-yellow-500 hover:bg-blue-600 text-dark w-10 h-10 rounded-full flex items-center justify-center transition">
+                                <a href="https://www.instagram.com/hari.krishna194?igsh=bXhqdHluY3lvOHlx" class="bg-yellow-500 hover:bg-blue-600 text-dark w-10 h-10 rounded-full flex items-center justify-center " target="_blank">
                                     <i class="fab fa-instagram"></i>
                                 </a>
                             </div>
@@ -428,11 +446,11 @@
                         </div>                        
           </div>
           
-          <div class="flex space-x-4 px-10 responsive-text container-fluid ">
-                        <a href="#" class="bg-yellow-500 hover:bg-blue-600 text-dark px-6 py-2 rounded-lg transition flex items-center">
+          <div class="flex space-x-4 px-10 responsive-text container-fluid downloadButton ">
+                        <a href="#" class="bg-yellow-500 hover:bg-blue-600 text-dark px-6 py-2 rounded-lg flex items-center">
                             <i class="fas fa-download mr-2"></i> Download CV
                         </a>
-                        <a href="#contact" class="border border-warning text-yellow-500 hover:bg-yellow-50 px-6 py-2 rounded-lg transition">
+                        <a href="#contact" class="border border-warning text-yellow-500 hover:bg-yellow-50 px-6 py-2 rounded-lg ">
                             Contact Me
                         </a>
           </div>
@@ -577,26 +595,26 @@
         <div class="row px-10">
           <div class="col-lg-4  p-2 ">
             <!-- <h3 class="text-light">TeamWork and communication Skills</h3> -->
-            <ol><li>- Have a good Knowledge in HTML with CSS and it's properties.</li>
-                <li>- Quite good Knowledge in JAVASCRIPT.</li>
-                <li>- Good in FUNCTIONS, IF Statements and SWITCH Statements.</li>
-                <li>- Concepts in Responsive Design, DOM Manipulation, Version Control.</li>
+            <ol><li><i class="fas fa-check-circle text-yellow-500 mr-2"></i>Have a good Knowledge in HTML with CSS and it's properties.</li>
+                <li><i class="fas fa-check-circle text-yellow-500 mr-2"></i>Quite good Knowledge in JAVASCRIPT.</li>
+                <li><i class="fas fa-check-circle text-yellow-500 mr-2"></i>Good in FUNCTIONS, IF Statements and SWITCH Statements.</li>
+                <li><i class="fas fa-check-circle text-yellow-500 mr-2"></i>Concepts in Responsive Design, DOM Manipulation, Version Control.</li>
             </ol>
           </div>
           <div class="col-lg-4  p-2 ">
             
-            <ol><li>- Good Knowledge in BOOTSTRAP-4,5.</li>
-                <li>- Responsive Designing for Mobile-first development, Flexbox, CSS Grid.</li>
-                <li>- Learned and use Git/GitHub for code managment and collaboration.</li>
-                <li>- Responsive Design Implementation.</li>
+            <ol><li><i class="fas fa-check-circle text-yellow-500 mr-2"></i>Good Knowledge in BOOTSTRAP-4,5.</li>
+                <li><i class="fas fa-check-circle text-yellow-500 mr-2"></i>Responsive Designing for Mobile-first development, Flexbox, CSS Grid.</li>
+                <li><i class="fas fa-check-circle text-yellow-500 mr-2"></i>Learned and use Git/GitHub for code managment and collaboration.</li>
+                <li><i class="fas fa-check-circle text-yellow-500 mr-2"></i>Responsive Design Implementation.</li>
             </ol>
           </div>
           <div class="col-lg-4  p-2 ">
             
-            <ol><li>- Basic Communication with Cross-Functional teams.</li>
-              <li>- Following best practices and write readable and reusable frontend code.</li>
-                <li>- Ensuring web pages work smoothly across different devices and screen sizes.</li>
-                <li>- Staying updated with frontent technolgies and continuosly improving skills.</li>
+            <ol><li><i class="fas fa-check-circle text-yellow-500 mr-2"></i>Basic Communication with Cross-Functional teams.</li>
+              <li><i class="fas fa-check-circle text-yellow-500 mr-2"></i>Following best practices and write readable and reusable frontend code.</li>
+                <li><i class="fas fa-check-circle text-yellow-500 mr-2"></i>Ensuring web pages work smoothly across different devices and screen sizes.</li>
+                <li><i class="fas fa-check-circle text-yellow-500 mr-2"></i>Staying updated with frontent technolgies and continuosly improving skills.</li>
             </ol>
           </div>
         </div>
@@ -716,7 +734,7 @@
                                 </div>
                                 <div>
                                     <h4 class="font-semibold text-dark">Email</h4>
-                                    <p class="text-gray-600">harishharish97940@gmail.com</p>
+                                    <p class="text-gray-600">harishharishxxxxx@gmail.com</p>
                                 </div>
                             </div>
                             
@@ -726,7 +744,7 @@
                                 </div>
                                 <div>
                                     <h4 class="font-semibold text-dark">Phone</h4>
-                                    <p class="text-gray-600">+91 97912 13868</p>
+                                    <p class="text-gray-600">+91 97912 1xxxx</p>
                                 </div>
                             </div>
                             
@@ -744,16 +762,16 @@
                         <div class="mt-8">
                             <h4 class="font-semibold mb-4 text-dark">Follow Me</h4>
                             <div class="flex space-x-4">
-                                <a href="https://github.com/imharikrishna194" class="bg-dark hover:bg-blue-600 text-yellow w-10 h-10 rounded-full flex items-center justify-center transition">
+                                <a href="https://github.com/imharikrishna194" class="bg-dark hover:bg-blue-600 text-yellow w-10 h-10 rounded-full flex items-center justify-center transition" target="_blank">
                                     <i class="fab fa-github"></i>
                                 </a>
-                                <a href="https://www.linkedin.com/in/hari-krishna-101810368?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="bg-dark hover:bg-blue-600 text-yellow w-10 h-10 rounded-full flex items-center justify-center transition">
+                                <a href="https://www.linkedin.com/in/hari-krishna-101810368?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="bg-dark hover:bg-blue-600 text-yellow w-10 h-10 rounded-full flex items-center justify-center transition" target="_blank" >
                                     <i class="fab fa-linkedin-in"></i>
                                 </a>
-                                <a href="t.me/HarikrishnA194" class="bg-dark hover:bg-dark text-yellow w-10 h-10 rounded-full flex items-center justify-center transition">
+                                <a href="t.me/HarikrishnA194" class="bg-dark hover:bg-dark text-yellow w-10 h-10 rounded-full flex items-center justify-center transition" target="_blank">
                                     <i class="fab fab fa-telegram"></i>
                                 </a>
-                                <a href="https://www.instagram.com/hari.krishna194?igsh=bXhqdHluY3lvOHlx" class="bg-dark hover:bg-dark text-yellow w-10 h-10 rounded-full flex items-center justify-center transition">
+                                <a href="https://www.instagram.com/hari.krishna194?igsh=bXhqdHluY3lvOHlx" class="bg-dark hover:bg-dark text-yellow w-10 h-10 rounded-full flex items-center justify-center transition" target="_blank" >
                                     <i class="fab fa-instagram"></i>
                                 </a>
                             </div>
@@ -828,16 +846,16 @@
                     <div>
                         <h4 class="text-lg font-semibold mb-4">Connect</h4>
                         <div class="flex space-x-4 mb-4">
-                            <a href="https://github.com/imharikrishna194" class="text-gray-400 hover:text-white transition">
+                            <a href="https://github.com/imharikrishna194" class="text-gray-400 hover:text-white transition"  target="_blank">
                                 <i class="fab fa-github text-xl"></i>
                             </a>
-                            <a href="https://www.linkedin.com/in/hari-krishna-101810368?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="text-gray-400 hover:text-white transition">
+                            <a href="https://www.linkedin.com/in/hari-krishna-101810368?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="text-gray-400 hover:text-white transition" target="_blank">
                                 <i class="fab fa-linkedin-in text-xl"></i>
                             </a>
-                            <a href="t.me/HarikrishnA194" class="text-gray-400 hover:text-white transition">
+                            <a href="t.me/HarikrishnA194" class="text-gray-400 hover:text-white transition" target="_blank">
                                 <i class="fab fab fa-telegram text-xl"></i>
                             </a>
-                            <a href="https://www.instagram.com/hari.krishna194?igsh=bXhqdHluY3lvOHlx" class="text-gray-400 hover:text-white transition">
+                            <a href="https://www.instagram.com/hari.krishna194?igsh=bXhqdHluY3lvOHlx" class="text-gray-400 hover:text-white transition" target="_blank">
                                 <i class="fab fa-instagram text-xl"></i>
                             </a>
                         </div>
