@@ -76,15 +76,49 @@
         animation-range: entry 0% cover 40%;
     }
 
-    @keyframes spin{
+    /* @keyframes spin{
       from{transform: rotate(0deg);}
       to{transform: rotate(360deg);}
     }
-    .spin:hover{
-      animation: spin 1s ease;
+    */
+    /* .scroll-watcher{
+      height: 10px;
+      position: fixed;
+      top: 0;
+      z-index: 1000;
+      background-color: red;
+      width: 100%;
+      scale: 0.1;
+      transform-origin: left;
+      animation: scroll-watcher linear;
+      animation-timeline: scroll();
+    }
+    @keyframes scroll-watcher {
+      to{scale:1 1;}
+    }
+    */
+    .imageAnimate{
+      scale: .8; opacity: 0;
+      animation: fade-in linear forwards;
+      animation-timeline: view();
+      animation-range: entry 200px ;
+    }
+    @keyframes fade-in{
+      to{ scale: 1;opacity: 1;}
     }
 
-   
+    /* .scroller[data-animated="true"] .skills__bar{
+      width: max-content;
+      flex-wrap: nowrap;
+      animation: scrolling linear ;
+      animation-timeline: scroll(root);
+    }
+    .scroller[data-direction="right"].skills__bar{
+      animation-direction: reverse;
+    }
+    @keyframes scrolling{
+      to{transform: translate(calc(-50% - 0.5rem));}
+    } */
     /*custom scroll bar*/
     ::-webkit-scrollbar{
         width: 6px;
@@ -197,9 +231,7 @@
       button{
         size: var(--buttton-size);
       }
-      .spin{
-        animation: spin 1s ease;
-      }
+      
       
     }
     @media screen and (min-width: 992px) {
@@ -376,14 +408,14 @@
         <div class="row h-100  ">
             <div class="col-lg-6 text-center rowCn ">
                <img src="assetsNew/MyRealtimeImage.jpg" alt="Responsive image" class=" img-fluid  h-100
-               w-50  "  >
+               w-50 "  >
             </div>
             <div class="col-lg-6  rowCn pb-6 " ><br><br><br>
                 <p class=" text-light h3 fw-light h5 responsive-text " >Hello, It's Me</p>
                 <p class=" h1 fw-bolder fs-1 text-warning responsive-text  ">HARI KRISHNA</p>
                 <p class=" text-light h3 fw-light h5 responsive-text  " >I'm a FrontEnd Developer</p><br>
-                <p class=" text-light responsive-text animate" >Seeking position to utilize my skills and abilities in the information technology industry that offer professional growth While being resourceful, innovative and flexible</p><br>
-                <div class="animate">
+                <p class=" text-light responsive-text " >Seeking position to utilize my skills and abilities in the information technology industry that offer professional growth While being resourceful, innovative and flexible</p><br>
+                <div class="">
                             <div class="flex space-x-4 ">
                                 <a href="https://github.com/imharikrishna194" class="bg-yellow-500 hover:bg-blue-600 text-dark w-10 h-10 rounded-full flex items-center justify-center spin"  target="_blank"  >
                                     <i class="fab fa-github"></i>
@@ -407,8 +439,8 @@
       </div>
   </section>
   <!---===== aboutSection =====-->  
-  <section class="aboutSection bg-dark text-warning responsive-text" id="about">
-      <div class="aboutSectionDiv container-fluid p-4 text-center animate animate">
+  <section class="aboutSection bg-dark text-warning responsive-text " id="about">
+      <div class="aboutSectionDiv container-fluid p-4 text-center ">
         <h1 class="text-2xl font-bold text-dark-400 ">AboutMe</h1>
       </div><hr><br> 
       <figure class="text-warning-400 py-5 pt-0 ">
@@ -476,7 +508,7 @@
       </figure><br>  
   </section>
   <!---===== QualificationSection =====-->
-  <section class="bg-warning p-3 text-dark responsive-text" id="QualificationSection">
+  <section class="bg-warning p-3 text-dark responsive-text" id="QualificationSection ">
     <div class="aboutSectionDiv container-fluid p-4 text-center  ">
         <h1 class="text-2xl font-bold text-dark-400 ">Qualification</h1>
       </div><hr><br> 
@@ -548,20 +580,19 @@
     </div>
   </section>
   <!--===== Skills =====-->
-  <section class="skills bg-dark text-warning pb-4 responsive-text" id="skills">
+  <section class="skills bg-dark text-warning pb-4 responsive-text " id="skills">
               <div class="CertificateDiv1 container-fluid p-4 text-center ">
                   <h1 class="text-2xl font-bold text-warning ">Skills</h1>
               </div><hr><br>   
               <div class="skills__container bd-grid">          
                 <div>
                   <h1 class="skills__subtitle fw-bold text-light">Web Technolgies</h1>
-                  
                   <div class="skills__data animate">
                     <div class="skills__names">
                         <i class='bx bxl-html5 skills__icon'></i>
                         <span class="skills__name">HTML5</span>
                     </div>
-                  <div class="skills__bar skills__html">
+                  <div class="skills__bar skills__html ">
                   </div>
                     <div>
                       <span class="skills__percentage">95%</span>
@@ -570,12 +601,12 @@
                   <div class="skills__data animate">
                     <div class="skills__names">
                       <i class='bx bxl-css3 skills__icon'></i>
-                       <span class="skills__name">CSS3</span>
+                       <span class="skills__name ">CSS3</span>
                     </div>
                     <div class="skills__bar skills__css">           
                     </div>
                     <div>
-                        <span class="skills__percentage">85%</span>
+                        <span class="skills__percentage ">85%</span>
                     </div>
                   </div>
                     <div class="skills__data animate">
@@ -603,7 +634,7 @@
                 </div>
                     
                 <div>              
-                  <img src="assetsNew/work3.jpg" alt="" class="skills__img">
+                  <img src="assetsNew/work3.jpg" alt="" class="skills__img imageAnimate">
                 </div>
               </div>
               <div class=" container-fluid p-3">
@@ -637,12 +668,12 @@
       </div>
   </section>
   <!--====== certification =====-->
-  <section class="CertificateSection bg-warning text-dark responsive-text" id="certification">
+  <section class="CertificateSection bg-warning text-dark responsive-text " id="certification">
       <div class="CertificateDiv1 container-fluid p-4 text-center ">
         <h1 class="text-2xl font-bold text-dark-400 ">Certification</h1>
       </div><hr><br> 
       <div class="CertificateDiv2 container text-center pb-5 animate">
-        <img src="assetsNew/Simplilearn Certificate.jpg" alt="SimplilearnCertificate" class="img-fluid d-block mx-auto"><br>
+        <img src="assetsNew/Simplilearn Certificate.jpg" alt="SimplilearnCertificate" class="img-fluid d-block mx-auto imageAnimate"><br>
         <p><a href="#" class="text-primary ">https://simpli.app.link/4qEhxoQtTTb</a><br><br>
         Thank you, #SkillUp by #Simplilearn 🙌 <br>
         📢  I am super excited to share that I’ve just completed Introduction to Front End Development. 🎓<br><br>
@@ -655,7 +686,7 @@
       </div>
   </section>
   <!--===== PersonalProfile =====-->
-  <section class="personalProfile bg-dark text-warning pb-4 responsive-text" id="personalprofile">
+  <section class="personalProfile bg-dark text-warning pb-4 responsive-text " id="personalprofile">
     <div class="aboutSectionDiv container-fluid p-4 text-center ">
         <h1 class="text-2xl font-bold text-dark-400 ">PersonalProfile</h1>
       </div><hr><br> 
@@ -663,7 +694,7 @@
         <div class="row h-100  ">
             <div class="col-lg-6 text-center row2Cn animate">
                <img src="assetsNew/myPaasportSizeimg.png"  alt="Responsive image" class=" img-fluid rounded-pill  h-100
-               w-50 " >
+               w-50 imageAnimate " >
             </div>
             <div class="col-lg-6 tableContainer animate"><br><br><br>
               <table class="table ">
@@ -703,28 +734,28 @@
     <div class="aboutSectionDiv container-fluid p-4 text-center ">
         <h1 class="text-2xl font-bold text-dark-400 ">Work</h1>
     </div><hr><br> 
-    <div class="work__container bd-grid pb-5 animate">
-      <a href="" class="work__img">
-        <img src="assetsNew/work1.jpg" alt="">
+    <div class="work__container bd-grid pb-5 ">
+      <a href="" class="work__img imageAnimate">
+        <img src="assetsNew/work1.jpg" alt="" >
         <h3 class="text-center">Develop UI compenents</h3>
       </a>
-      <a href="" class="work__img">
-        <img src="assetsNew/work2.jpg" alt="">
+      <a href="" class="work__img imageAnimate">
+        <img src="assetsNew/work2.jpg" alt="" >
         <h3 class="text-center">Assist in Website Designers and Backend Developers</h3>
       </a>
-      <a href="" class="work__img">
-        <img src="assetsNew/work3.jpg" alt="">
+      <a href="" class="work__img imageAnimate">
+        <img src="assetsNew/work3.jpg" alt="" >
         <h3 class="text-center">Write Clean and maintainable Code</h3>
       </a>
-      <a href="" class="work__img">
-        <img src="assetsNew/work4.jpg" alt="">
+      <a href="" class="work__img imageAnimate">
+        <img src="assetsNew/work4.jpg" alt="" >
         <h3 class="text-center">Collaborate with Designers and Backend Developers</h3>
       </a>
-      <a href="" class="work__img">
+      <a href="" class="work__img imageAnimate">
         <img src="assetsNew/work5.jpg" alt="">
         <h3 class="text-center">Responsive Design Implementation</h3>
       </a>
-      <a href="" class="work__img">
+      <a href="" class="work__img imageAnimate">
         <img src="assetsNew/work6.jpg" alt="">
         <h3 class="text-center">Learn and Adapt</h3>
       </a>
