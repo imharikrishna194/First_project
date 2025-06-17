@@ -71,6 +71,58 @@
         animation-timeline: view();
         animation-range: entry 0% cover 40%;
     }
+    .autoShow{
+      animation: text-appear both;
+      animation-timeline: view();
+      animation-range: entry 20% cover 100vh;
+    }
+    @keyframes text-appear{
+      from{
+        opacity: 0;
+        transform: translateY(100px);
+      }
+      to{
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .imageReveal{
+      animation: imageReveal both;
+      animation-timeline: view(10% 5%);
+    }
+    @keyframes imageReveal{
+      from{
+        filter: saturate(0) contrast(4) brightness(.1) blur(5px);
+        opacity: 0;
+        scale: .95;
+        translate: 0 4rem;
+      }
+      to{
+        filter: none;
+        opacity: 1;
+        scale: 1;
+        translate: 0 0;
+      }
+    }
+    /* .autoBlur{
+      animation:autoBlurAnimation linear;
+      animation-timeline: view(50% auto);
+    }
+    @keyframes autoBlurAnimation{
+      0%{
+        filter: blur(20px);
+      }
+      35%, 45%{
+        filter: blur(20px);
+      }
+      70%{
+        filter: blur(20px);
+      }
+      100%{
+        filter: blur(0px);
+      }
+    } */
 
     .mainImg{
       animation-name:slideUp;
@@ -94,6 +146,32 @@
     @keyframes slideRight{
       from{transform: translateX(-300%);}
       to{transform: translateX(0%);}
+    }
+    .fadeUp{
+      animation: fadeUp both;
+      animation-timeline: view();
+    }
+    .timeline-item:nth-child(1){
+      animation-range: entry 20% cover 40%;
+    }
+    .timeline-item:nth-child(2){
+      animation-range: entry 40% cover 60%;
+    }
+    .timeline-item:nth-child(3){
+      animation-range: entry 60% cover 80%;
+    }
+    .timeline-item:nth-child(4){
+      animation-range: entry 80% cover 100%;
+    }
+    @keyframes fadeUp{
+      from{
+        opacity: 0;
+        transform: translateY(10px) scale(0.5);
+      }
+      to{
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
     }
     @keyframes slideUp{
       from{transform: translateY(-300%);}
@@ -127,6 +205,7 @@
     @keyframes fade-in{
       to{ scale: 1;opacity: 1;}
     }
+ 
    
     /*custom scroll bar*/
     ::-webkit-scrollbar{
@@ -434,14 +513,14 @@
                w-50 "  >
             </div>
             <div class="col-lg-6  rowCn pb-6  " ><br><br><br>
-                <p class=" text-light h3 fw-light h5 responsive-text  animate" >Hello, It's Me</p>
-                <p class=" h1 fw-bolder fs-1 text-warning responsive-text animate ">HARI KRISHNA</p>
-                <p class=" text-light h3 fw-light h5 responsive-text animate " >I'm a FrontEnd Developer</p><br>
-                <p class=" text-light responsive-text animate" >Seeking position to utilize my skills and abilities in the information technology industry that offer professional growth While being resourceful, innovative and flexible</p><br>
-                <div class="">
+                <p class=" text-light h3 fw-light h5 responsive-text  autoShow" >Hello, It's Me</p>
+                <p class=" h1 fw-bolder fs-1 text-warning responsive-text autoShow ">HARI KRISHNA</p>
+                <p class=" text-light h3 fw-light h5 responsive-text autoShow " >I'm a FrontEnd Developer</p><br>
+                <p class=" text-light responsive-text autoShow" >Seeking position to utilize my skills and abilities in the information technology industry that offer professional growth While being resourceful, innovative and flexible</p><br>
+                <div class="autoShow">
                             <div class="flex space-x-4 ">
                                 <a href="https://github.com/imharikrishna194" class="bg-dark-500  text-yellow-500 w-10 h-10 rounded-full flex items-center justify-center rotate hoverBtn"  target="_blank"  >
-                                    <i class="fab fa-github"></i>
+                                    <i class="fab fa-github "></i>
                                 </a>
                                 <a href="https://www.linkedin.com/in/hari-krishna-101810368?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="bg-yellow  text-yellow-500 w-10 h-10 rounded-full flex items-center justify-center rotate hoverBtn"  target="_blank" >
                                     <i class="fab fa-linkedin-in"></i>
@@ -456,15 +535,15 @@
                                 </a>
                             </div>
                 </div><br>
-                <a href="#personalprofile" class=" text-yellow-500 btn btn-sm responsive-text  hoverBtn " >More...</a>                
+                <a href="#personalprofile" class=" text-yellow-500 btn btn-sm responsive-text  hoverBtn autoShow" >More...</a>                
             </div>
         </div>
       </div>
   </section>
   <!---===== aboutSection =====-->  
   <section class="aboutSection bg-dark text-warning responsive-text " id="about">
-      <div class="aboutSectionDiv container-fluid p-4 text-center ">
-        <h1 class="text-2xl font-bold text-dark-400 ">AboutMe</h1>
+      <div class="aboutSectionDiv container-fluid p-4 text-center autoShow">
+        <h1 class="text-2xl font-bold text-dark-400  ">AboutMe</h1>
       </div><hr><br> 
       <figure class="text-warning-400 py-5 pt-0 ">
         <div class="container mx-auto ">
@@ -472,33 +551,33 @@
       <div class="flex flex-col md:flex-row items-center ">
                
                 <div class=" col-lg-12  ">
-                    <h3 class="text-2xl font-semibold mb-4 text-yellow-500">Who am I?</h3>
+                    <h3 class="text-2xl font-semibold mb-4 text-yellow-500 autoShow">Who am I?</h3>
                   <div class=" container-fluid py-5 px-10 pt-0 pb-3 ">
         <div class="row text-light">
-          <div class="col-lg-4  p-2 animate" >
-            <h3 >TeamWork and communication Skills :</h3>
-            <ol><li>Worked with small and large team in sevearl website development projects.</li>
-                <li>Offered alternative solution to improve flow.</li>
-                <li>Particpated in client mettings to fully understand project requirements.</li>
+          <div class="col-lg-4  p-2 " >
+            <h3 class="autoShow">TeamWork and communication Skills :</h3>
+            <ol><li class="autoShow">Worked with small and large team in sevearl website development projects.</li>
+                <li class="autoShow">Offered alternative solution to improve flow.</li>
+                <li class="autoShow">Particpated in client mettings to fully understand project requirements.</li>
             </ol>
           </div>
-          <div class="col-lg-4  p-2 animate" >
-            <h3 class="">Project and Management :</h3>
-            <ol><li>Successfully complete two basic coding projects simultaneously.</li>
-                <li>Create a project timeline for our intern group that was later adapted by Management for other group.</li>
-                <li>Orgainzed project files and coding resources which led to faster project turnaround.</li>
+          <div class="col-lg-4  p-2 " >
+            <h3 class="autoShow">Project and Management :</h3>
+            <ol><li class="autoShow">Successfully complete two basic coding projects simultaneously.</li>
+                <li class="autoShow">Create a project timeline for our intern group that was later adapted by Management for other group.</li>
+                <li class="autoShow">Orgainzed project files and coding resources which led to faster project turnaround.</li>
             </ol>
           </div>
-          <div class="col-lg-4  p-2  animate" >
-            <h3 class=" ">Roles and responsibilites :</h3>
-            <ol><li>Develope UI compenents and Asist Website Layout and features</li>
-                <li>Write Clean,maintainable cod and Responsive Design Implementation</li>
-                <li>Stay updated with frontend technolgies and continously improve skills under mentorship</li>
+          <div class="col-lg-4  p-2  autoShow" >
+            <h3 class=" autoShow">Roles and responsibilites :</h3>
+            <ol><li class="autoShow">Develope UI compenents and Asist Website Layout and features</li>
+                <li class="autoShow">Write Clean,maintainable cod and Responsive Design Implementation</li>
+                <li class="autoShow">Stay updated with frontend technolgies and continously improve skills under mentorship</li>
             </ol>
           </div>
         </div>
                </div>
-          <div class="grid grid-cols-2 gap-4 mb-8 pt-0  text-warning container-fluid responsive-text animate ">
+          <div class="grid grid-cols-2 gap-4 mb-8 pt-0  text-warning container-fluid responsive-text autoShow ">
                         <div class="flex items-center ">
                             <i class="fas fa-check-circle text-yellow-500 mr-2"></i>
                             <span>Problem Solving</span>
@@ -517,7 +596,7 @@
                         </div>                        
           </div>
           
-          <div class="flex space-x-4 px-10 responsive-text container-fluid downloadButton animate ">
+          <div class="flex space-x-4 px-10 responsive-text container-fluid downloadButton autoShow ">
                         <a href="#" class="bg-yellow-500 hover:bg-blue-600 text-dark px-6 py-2 rounded-lg flex items-center">
                             <i class="fas fa-download mr-2"></i> Download CV
                         </a>
@@ -532,13 +611,13 @@
   </section>
   <!---===== QualificationSection =====-->
   <section class="bg-warning p-3 text-dark responsive-text" id="QualificationSection ">
-    <div class="aboutSectionDiv container-fluid p-4 text-center  ">
-        <h1 class="text-2xl font-bold text-dark-400 ">Qualification</h1>
+    <div class="aboutSectionDiv container-fluid p-4 text-center autoShow ">
+        <h1 class="text-2xl font-bold text-dark-400  ">Qualification</h1>
       </div><hr><br> 
     <div class="container-fluid  pb-5">
       <!-- Education -->
         <div class="md:w-1/2 md:pl-8 delay-300  QualificationDiv responsive-text">
-          <h3 class="text-2xl font-semibold mb-8 flex items-center">
+          <h3 class="text-2xl font-semibold mb-8 flex items-center autoShow">
             <i class="fas fa-graduation-cap text-dark-500 mr-4 text-3xl"></i> Education
           </h3>
               <div class="relative">
@@ -604,13 +683,13 @@
   </section>
   <!--===== Skills =====-->
   <section class="skills bg-dark text-warning pb-4 responsive-text " id="skills">
-              <div class="CertificateDiv1 container-fluid p-4 text-center ">
+              <div class="CertificateDiv1 container-fluid p-4 text-center autoShow">
                   <h1 class="text-2xl font-bold text-warning ">Skills</h1>
               </div><hr><br>   
               <div class="skills__container bd-grid">          
                 <div>
-                  <h1 class="skills__subtitle fw-bold text-light">Web Technolgies</h1>
-                  <div class="skills__data animate">
+                  <h1 class="skills__subtitle fw-bold text-light autoShow">Web Technolgies</h1>
+                  <div class="skills__data fadeUp">
                     <div class="skills__names">
                         <i class='bx bxl-html5 skills__icon'></i>
                         <span class="skills__name">HTML5</span>
@@ -621,7 +700,7 @@
                       <span class="skills__percentage">95%</span>
                     </div>
                   </div>
-                  <div class="skills__data animate">
+                  <div class="skills__data fadeUp">
                     <div class="skills__names">
                       <i class='bx bxl-css3 skills__icon'></i>
                        <span class="skills__name ">CSS3</span>
@@ -632,7 +711,7 @@
                         <span class="skills__percentage ">85%</span>
                     </div>
                   </div>
-                    <div class="skills__data animate">
+                    <div class="skills__data fadeUp">
                       <div class="skills__names">
                         <i class='bx bxl-javascript skills__icon' ></i>
                         <span class="skills__name">JAVASCRIPT</span>
@@ -643,7 +722,7 @@
                       <span class="skills__percentage">65%</span>
                     </div>
                     </div>
-                      <div class="skills__data animate">
+                      <div class="skills__data fadeUp">
                         <div class="skills__names">
                           <i class='bx bxs-paint skills__icon'></i>
                             <span class="skills__name">UI</span>
@@ -657,13 +736,13 @@
                 </div>
                     
                 <div>              
-                  <img src="assetsNew/work3.jpg" alt="" class="skills__img imageAnimate">
+                  <img src="assetsNew/work3.jpg" alt="" class="skills__img imageReveal">
                 </div>
               </div>
               <div class=" container-fluid p-3">
                 <h1 class="skills__text fw-bold text-center text-light ">Technical Summary </h1>
         <div class="row px-10">
-          <div class="col-lg-4  p-2 animate">
+          <div class="col-lg-4  p-2 autoShow">
             <!-- <h3 class="text-light">TeamWork and communication Skills</h3> -->
             <ol><li><i class="fas fa-check-circle text-yellow-500 mr-2"></i>Have a good Knowledge in HTML with CSS and it's properties.</li>
                 <li><i class="fas fa-check-circle text-yellow-500 mr-2"></i>Quite good Knowledge in JAVASCRIPT.</li>
@@ -671,7 +750,7 @@
                 <li><i class="fas fa-check-circle text-yellow-500 mr-2"></i>Concepts in Responsive Design, DOM Manipulation, Version Control.</li>
             </ol>
           </div>
-          <div class="col-lg-4  p-2 animate">
+          <div class="col-lg-4  p-2 autoShow">
             
             <ol><li><i class="fas fa-check-circle text-yellow-500 mr-2"></i>Good Knowledge in BOOTSTRAP-4,5.</li>
                 <li><i class="fas fa-check-circle text-yellow-500 mr-2"></i>Responsive Designing for Mobile-first development, Flexbox, CSS Grid.</li>
@@ -679,7 +758,7 @@
                 <li><i class="fas fa-check-circle text-yellow-500 mr-2"></i>Responsive Design Implementation.</li>
             </ol>
           </div>
-          <div class="col-lg-4  p-2 animate">
+          <div class="col-lg-4  p-2 autoShow">
             
             <ol><li><i class="fas fa-check-circle text-yellow-500 mr-2"></i>Basic Communication with Cross-Functional teams.</li>
               <li><i class="fas fa-check-circle text-yellow-500 mr-2"></i>Following best practices and write readable and reusable frontend code.</li>
@@ -692,12 +771,12 @@
   </section>
   <!--====== certification =====-->
   <section class="CertificateSection bg-warning text-dark responsive-text " id="certification">
-      <div class="CertificateDiv1 container-fluid p-4 text-center ">
+      <div class="CertificateDiv1 container-fluid p-4 text-center autoShow">
         <h1 class="text-2xl font-bold text-dark-400 ">Certification</h1>
       </div><hr><br> 
-      <div class="CertificateDiv2 container text-center pb-5 animate">
-        <img src="assetsNew/Simplilearn Certificate.jpg" alt="SimplilearnCertificate" class="img-fluid d-block mx-auto imageAnimate"><br>
-        <p><a href="#" class="text-primary ">https://simpli.app.link/4qEhxoQtTTb</a><br><br>
+      <div class="CertificateDiv2 container text-center pb-5 autoShow">
+        <img src="assetsNew/Simplilearn Certificate.jpg" alt="SimplilearnCertificate" class="img-fluid d-block mx-auto imageReveal "><br>
+        <p><a href="#" class="text-primary autoShow">https://simpli.app.link/4qEhxoQtTTb</a><br><br>
         Thank you, #SkillUp by #Simplilearn 🙌 <br>
         📢  I am super excited to share that I’ve just completed Introduction to Front End Development. 🎓<br><br>
         I had a great experience learning industry aligned skills of Software Development  <br><br>
@@ -710,14 +789,14 @@
   </section>
   <!--===== PersonalProfile =====-->
   <section class="personalProfile bg-dark text-warning pb-4 responsive-text " id="personalprofile">
-    <div class="aboutSectionDiv container-fluid p-4 text-center ">
-        <h1 class="text-2xl font-bold text-dark-400 ">PersonalProfile</h1>
+    <div class="aboutSectionDiv container-fluid p-4 text-center autoShow">
+        <h1 class="text-2xl font-bold text-dark-400  ">PersonalProfile</h1>
       </div><hr><br> 
     <div class="container-fluid h-100 pb-5 responsive-text">
         <div class="row h-100  ">
             <div class="col-lg-6 text-center row2Cn animate">
                <img src="assetsNew/myPaasportSizeimg.png"  alt="Responsive image" class=" img-fluid rounded-pill  h-100
-               w-50 imageAnimate " >
+               w-50 imageReveal " >
             </div>
             <div class="col-lg-6 tableContainer animate"><br><br><br>
               <table class="table ">
@@ -754,31 +833,31 @@
   </section>
   <!--===== WORK =====-->
   <section class="work section bg-warning text-dark pb-6 responsive-text" id="work">
-    <div class="aboutSectionDiv container-fluid p-4 text-center ">
+    <div class="aboutSectionDiv container-fluid p-4 text-center autoShow">
         <h1 class="text-2xl font-bold text-dark-400 ">Work</h1>
     </div><hr><br> 
     <div class="work__container bd-grid pb-5 ">
-      <a href="" class="work__img imageAnimate">
+      <a href="" class="work__img imageAnimate imageReveal">
         <img src="assetsNew/work1.jpg" alt="" >
         <h3 class="text-center">Develop UI compenents</h3>
       </a>
-      <a href="" class="work__img imageAnimate">
+      <a href="" class="work__img imageAnimate imageReveal">
         <img src="assetsNew/work2.jpg" alt="" >
         <h3 class="text-center">Assist in Website Designers and Backend Developers</h3>
       </a>
-      <a href="" class="work__img imageAnimate">
+      <a href="" class="work__img imageAnimate imageReveal">
         <img src="assetsNew/work3.jpg" alt="" >
         <h3 class="text-center">Write Clean and maintainable Code</h3>
       </a>
-      <a href="" class="work__img imageAnimate">
+      <a href="" class="work__img imageAnimate imageReveal">
         <img src="assetsNew/work4.jpg" alt="" >
         <h3 class="text-center">Collaborate with Designers and Backend Developers</h3>
       </a>
-      <a href="" class="work__img imageAnimate">
+      <a href="" class="work__img imageAnimate imageReveal">
         <img src="assetsNew/work5.jpg" alt="">
         <h3 class="text-center">Responsive Design Implementation</h3>
       </a>
-      <a href="" class="work__img imageAnimate">
+      <a href="" class="work__img imageAnimate imageReveal">
         <img src="assetsNew/work6.jpg" alt="">
         <h3 class="text-center">Learn and Adapt</h3>
       </a>
@@ -786,7 +865,7 @@
   </section>
   <!--===== CONTACT =====-->
   <section id="contact" class="py-20 bg-gray-50 bg-dark text-warning responsive-text">
-        <div class="container mx-auto px-2">
+        <div class="container mx-auto px-2 autoShow">
             <h2 class="text-3xl md:text-4xl font-bold text-center pt-0 mb-4 ">ContactMe</h2>
             <p class="text-center text-yellow-400 mb-16 max-w-2xl mx-auto ">
                 Have a project in mind or want to discuss potential opportunities? Feel free to reach out!
@@ -885,14 +964,14 @@
   <footer class="bg-black text-white py-12 responsive-text">
         <div class="container mx-auto px-6">
             <div class="flex flex-col md:flex-row justify-between">
-                <div class="mb-8 md:mb-0 animate">
+                <div class="mb-8 md:mb-0 autoShow">
                     <h3 class="text-2xl font-bold mb-4">imhariKrishna</h3>
                     <p class="max-w-xs text-gray-400">
                         Full Stack Developer creating digital experiences that make an impact.
                     </p>
                 </div>
                 
-                <div class="grid grid-cols-2 md:grid-cols-3 gap-8 animate">
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-8 autoShow">
                     <div>
                         <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
                         <ul class="space-y-2">
