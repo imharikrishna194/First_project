@@ -51,10 +51,6 @@
     html{
         scroll-behavior: smooth;
     }
-    body{
-        margin: 0;
-        padding: 0; 
-    }
 
     @keyframes appear{
         from{
@@ -76,27 +72,52 @@
         animation-range: entry 0% cover 40%;
     }
 
-    /* @keyframes spin{
-      from{transform: rotate(0deg);}
-      to{transform: rotate(360deg);}
+    .mainImg{
+      animation-name:slideUp;
+      animation-duration: 2s;
+      transition: 2s;
     }
-    */
-    /* .scroll-watcher{
-      height: 10px;
-      position: fixed;
-      top: 0;
-      z-index: 1000;
-      background-color: red;
-      width: 100%;
-      scale: 0.1;
-      transform-origin: left;
-      animation: scroll-watcher linear;
-      animation-timeline: scroll();
+
+    .rotate:hover{
+      animation:rotate ;
+      animation-duration: 2s;
+      animation-iteration-count: infinite;
+      
     }
-    @keyframes scroll-watcher {
-      to{scale:1 1;}
+    @keyframes rotate{
+      50%{transform: rotateZ(360deg);
+      }
     }
-    */
+    @keyframes slideLeft{
+      to{transform: translateX(300%);}
+    }
+    @keyframes slideRight{
+      from{transform: translateX(-300%);}
+      to{transform: translateX(0%);}
+    }
+    @keyframes slideUp{
+      from{transform: translateY(-300%);}
+    }
+    .slideDown{
+      animation: slideDown 2s;
+    }
+    @keyframes slideDown{
+      to{transform: translateY(300%);}
+    }    
+    @keyframes grow{
+      50%{transform: scale(2,2);}
+    }
+    @keyframes shrink{
+      50%{transform: scale(0.5,0.5);}
+    }
+    @keyframes fade{
+      50%{opacity: 1;}
+    }
+    @keyframes sample{
+      from{transform: translateY(300%);}
+    }
+  
+    
     .imageAnimate{
       scale: .8; opacity: 0;
       animation: fade-in linear forwards;
@@ -106,19 +127,7 @@
     @keyframes fade-in{
       to{ scale: 1;opacity: 1;}
     }
-
-    /* .scroller[data-animated="true"] .skills__bar{
-      width: max-content;
-      flex-wrap: nowrap;
-      animation: scrolling linear ;
-      animation-timeline: scroll(root);
-    }
-    .scroller[data-direction="right"].skills__bar{
-      animation-direction: reverse;
-    }
-    @keyframes scrolling{
-      to{transform: translate(calc(-50% - 0.5rem));}
-    } */
+   
     /*custom scroll bar*/
     ::-webkit-scrollbar{
         width: 6px;
@@ -196,7 +205,7 @@
         grid-template-columns: repeat(3, 1fr);
         column-gap: 2rem;
       }
-      }
+    }
     @media screen and (max-width:600px) {
       .container-fluid{
         width: 100%;
@@ -335,9 +344,23 @@
     .work__img img:hover {
     transform: scale(1.1);
     }
+    .hoverBtn{
+      transition: border-radius 0.3s ease;
+      animation-delay: 2s;
+      animation:slideRight linear 1s;
+    
+     
+      
+    }
+    .hoverBtn:hover{
+      border: 1px solid rgb(197, 197, 17);
+      color: red;
+      
+
+    }
 
 
-/* =====personalprofile ====== */
+/* =====personalProfile ====== */
     .personalProfile .container-fluid .row .rowCn img{
       mix-blend-mode: screen;
     }
@@ -357,7 +380,7 @@
         <div class="max-w-7xl mx-auto px-4">
           <div class="flex justify-between items-center h-16">
             <!-- Logo -->
-          <div class="flex-shrink-0">
+          <div class="flex-shrink-0 animate">
             <a href="#" class="text-2xl font-bold text-yellow-400">MyPortFolio</a>
           </div>
 
@@ -375,7 +398,7 @@
 
         <!-- Mobile Menu Button -->
         <div class="md:hidden">
-          <button id="menu-btn" class="text-dark-700 focus:outline-none spin">
+          <button id="menu-btn" class="text-dark-700 focus:outline-none rotate">
             <svg class="w-6 h-6" fill="none" stroke="yellow" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
               d="M4 6h16M4 12h16M4 18h16"/>
@@ -407,33 +430,33 @@
       <div class="container-fluid h-100 ">
         <div class="row h-100  ">
             <div class="col-lg-6 text-center rowCn ">
-               <img src="assetsNew/MyRealtimeImage.jpg" alt="Responsive image" class=" img-fluid  h-100
+               <img src="assetsNew/MyRealtimeImage.jpg" alt="Responsive image" class=" mainImg img-fluid  h-100
                w-50 "  >
             </div>
-            <div class="col-lg-6  rowCn pb-6 " ><br><br><br>
-                <p class=" text-light h3 fw-light h5 responsive-text " >Hello, It's Me</p>
-                <p class=" h1 fw-bolder fs-1 text-warning responsive-text  ">HARI KRISHNA</p>
-                <p class=" text-light h3 fw-light h5 responsive-text  " >I'm a FrontEnd Developer</p><br>
-                <p class=" text-light responsive-text " >Seeking position to utilize my skills and abilities in the information technology industry that offer professional growth While being resourceful, innovative and flexible</p><br>
+            <div class="col-lg-6  rowCn pb-6  " ><br><br><br>
+                <p class=" text-light h3 fw-light h5 responsive-text  animate" >Hello, It's Me</p>
+                <p class=" h1 fw-bolder fs-1 text-warning responsive-text animate ">HARI KRISHNA</p>
+                <p class=" text-light h3 fw-light h5 responsive-text animate " >I'm a FrontEnd Developer</p><br>
+                <p class=" text-light responsive-text animate" >Seeking position to utilize my skills and abilities in the information technology industry that offer professional growth While being resourceful, innovative and flexible</p><br>
                 <div class="">
                             <div class="flex space-x-4 ">
-                                <a href="https://github.com/imharikrishna194" class="bg-yellow-500 hover:bg-blue-600 text-dark w-10 h-10 rounded-full flex items-center justify-center spin"  target="_blank"  >
+                                <a href="https://github.com/imharikrishna194" class="bg-dark-500  text-yellow-500 w-10 h-10 rounded-full flex items-center justify-center rotate hoverBtn"  target="_blank"  >
                                     <i class="fab fa-github"></i>
                                 </a>
-                                <a href="https://www.linkedin.com/in/hari-krishna-101810368?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="bg-yellow-500 hover:bg-blue-600 text-dark w-10 h-10 rounded-full flex items-center justify-center spin"  target="_blank" >
+                                <a href="https://www.linkedin.com/in/hari-krishna-101810368?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="bg-yellow  text-yellow-500 w-10 h-10 rounded-full flex items-center justify-center rotate hoverBtn"  target="_blank" >
                                     <i class="fab fa-linkedin-in"></i>
                                 </a>
-                                <a href="t.me/HarikrishnA194" class="bg-yellow-500 hover:bg-blue-600 text-dark w-10 h-10 rounded-full flex items-center justify-center spin "  target="_blank" 
+                                <a href="t.me/HarikrishnA194" class="  text-yellow-500 w-10 h-10 rounded-full flex items-center justify-center rotate hoverBtn"  target="_blank" 
                                 >
                                     <i class="fab fab fab fa-telegram"></i>
                                 </a>
-                                <a href="https://www.instagram.com/hari.krishna194?igsh=bXhqdHluY3lvOHlx" class="bg-yellow-500 hover:bg-blue-600 text-dark w-10 h-10 rounded-full flex items-center justify-center spin"  target="_blank"
+                                <a href="https://www.instagram.com/hari.krishna194?igsh=bXhqdHluY3lvOHlx" class="  text-yellow-500 w-10 h-10 rounded-full flex items-center justify-center rotate hoverBtn"  target="_blank"
                                 >
                                     <i class="fab fa-instagram"></i>
                                 </a>
                             </div>
                 </div><br>
-                <a href="#personalprofile" class=" bg-warning btn btn-sm responsive-text hover:bg-blue-600 animate" >More...</a>                
+                <a href="#personalprofile" class=" text-yellow-500 btn btn-sm responsive-text  hoverBtn " >More...</a>                
             </div>
         </div>
       </div>
@@ -809,16 +832,16 @@
                         <div class="mt-8">
                             <h4 class="font-semibold mb-4 text-dark">Follow Me</h4>
                             <div class="flex space-x-4">
-                                <a href="https://github.com/imharikrishna194" class="bg-dark hover:bg-blue-600 text-yellow w-10 h-10 rounded-full flex items-center justify-center spin transition" target="_blank">
+                                <a href="https://github.com/imharikrishna194" class="bg-dark hover:bg-blue-600 text-yellow w-10 h-10 rounded-full flex items-center justify-center rotate transition" target="_blank">
                                     <i class="fab fa-github"></i>
                                 </a>
-                                <a href="https://www.linkedin.com/in/hari-krishna-101810368?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="bg-dark hover:bg-blue-600 text-yellow w-10 h-10 rounded-full flex items-center justify-center spin transition" target="_blank" >
+                                <a href="https://www.linkedin.com/in/hari-krishna-101810368?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="bg-dark hover:bg-blue-600 text-yellow w-10 h-10 rounded-full flex items-center justify-center rotate transition" target="_blank" >
                                     <i class="fab fa-linkedin-in"></i>
                                 </a>
-                                <a href="t.me/HarikrishnA194" class="bg-dark hover:bg-dark text-yellow w-10 h-10 rounded-full flex items-center justify-center transition spin" target="_blank">
+                                <a href="t.me/HarikrishnA194" class="bg-dark hover:bg-dark text-yellow w-10 h-10 rounded-full flex items-center justify-center transition rotate" target="_blank">
                                     <i class="fab fab fa-telegram"></i>
                                 </a>
-                                <a href="https://www.instagram.com/hari.krishna194?igsh=bXhqdHluY3lvOHlx" class="bg-dark hover:bg-dark text-yellow w-10 h-10 rounded-full flex items-center justify-center transition spin" target="_blank" >
+                                <a href="https://www.instagram.com/hari.krishna194?igsh=bXhqdHluY3lvOHlx" class="bg-dark hover:bg-dark text-yellow w-10 h-10 rounded-full flex items-center justify-center transition rotate" target="_blank" >
                                     <i class="fab fa-instagram"></i>
                                 </a>
                             </div>
@@ -854,12 +877,12 @@
                 </div>
             </div>
         </div>
-    </section>
+  </section>
 
 </main>
 <!--===== FOOTER =====-->
  <!-- Footer -->
-    <footer class="bg-black text-white py-12 responsive-text">
+  <footer class="bg-black text-white py-12 responsive-text">
         <div class="container mx-auto px-6">
             <div class="flex flex-col md:flex-row justify-between">
                 <div class="mb-8 md:mb-0 animate">
@@ -893,16 +916,16 @@
                     <div>
                         <h4 class="text-lg font-semibold mb-4">Connect</h4>
                         <div class="flex space-x-4 mb-4 animate">
-                            <a href="https://github.com/imharikrishna194" class="text-gray-400 hover:text-white transition spin"  target="_blank">
+                            <a href="https://github.com/imharikrishna194" class="text-gray-400 hover:text-white transition rotate"  target="_blank">
                                 <i class="fab fa-github text-xl"></i>
                             </a>
-                            <a href="https://www.linkedin.com/in/hari-krishna-101810368?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="text-gray-400 hover:text-white spin transition" target="_blank">
+                            <a href="https://www.linkedin.com/in/hari-krishna-101810368?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="text-gray-400 hover:text-white rotate transition" target="_blank">
                                 <i class="fab fa-linkedin-in text-xl"></i>
                             </a>
-                            <a href="t.me/HarikrishnA194" class="text-gray-400 hover:text-white spin transition" target="_blank">
+                            <a href="t.me/HarikrishnA194" class="text-gray-400 hover:text-white rotate transition" target="_blank">
                                 <i class="fab fab fa-telegram text-xl"></i>
                             </a>
-                            <a href="https://www.instagram.com/hari.krishna194?igsh=bXhqdHluY3lvOHlx" class="text-gray-400 hover:text-white transition spin" target="_blank">
+                            <a href="https://www.instagram.com/hari.krishna194?igsh=bXhqdHluY3lvOHlx" class="text-gray-400 hover:text-white transition rotate" target="_blank">
                                 <i class="fab fa-instagram text-xl"></i>
                             </a>
                         </div>
@@ -915,7 +938,7 @@
                 <p>&copy; 2025  imhariKrishna. All rights reserved.</p>
             </div>
         </div>        
-    </footer>
+  </footer>
 
   <!--------------------------------------------------------->
  
